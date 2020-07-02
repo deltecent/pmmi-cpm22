@@ -11,7 +11,7 @@ set pmmi enable
 #set pmmi debug=status;connect
 #set pmmi rts
 #attach pmmi connect=/dev/cu.USA19H14411P1.1
-attach pmmi connect=67.164.159.109:4667
+#attach pmmi connect=67.164.159.109:4667
 
 load dbl.bin ff00
 g ff00
