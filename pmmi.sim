@@ -1,0 +1,17 @@
+set cpu 8080
+dep clock 2000
+set sio nosleep
+
+attach dsk0 cpm56k.dsk
+attach dsk1 MEXPMMI.DSK
+attach dsk2 PMMI-T20.DSK
+attach dsk3 MODEM7.DSK
+
+set pmmi enable
+#set pmmi debug=status;connect
+#set pmmi rts
+#attach pmmi connect=/dev/cu.USA19H14411P1.1
+attach pmmi connect=67.164.159.109:4667
+
+load dbl.bin ff00
+g ff00
